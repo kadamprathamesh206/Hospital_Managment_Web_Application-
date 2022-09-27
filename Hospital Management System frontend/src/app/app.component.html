@@ -1,0 +1,18 @@
+<!-- <div class="container"> -->
+    <div class="main-content">
+
+        <div class="header">
+            <div class="row">
+                <div class="col-11">
+                    <h1>Hospital Management System</h1>
+                </div>
+                <div class="col-1" *ngIf="!isLoginPage">
+                    <mat-icon (click)="logout()" float="right" class="logout-icon" aria-hidden="false" fontIcon="Logout">power_settings_new</mat-icon>
+                </div>
+            </div>
+
+        </div>
+
+        <router-outlet></router-outlet>
+    </div>
+<!-- </div> -->

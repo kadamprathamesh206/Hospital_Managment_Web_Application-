@@ -1,0 +1,14 @@
+<div class="row" style="background-color: white;">
+    <div class="col-auto text-center">
+        <div class="sidebar">
+            <h2 class="pt-2">Dashboard</h2>
+            <hr>
+            <h3 *ngFor="let item of userMenu" class="items" (click)="onMenuItemSelect(item.value)">
+                {{ item.viewValue }}
+            </h3>
+        </div>
+    </div>
+    <div class="col" style="padding-right: 20px">
+        <router-outlet></router-outlet>
+    </div>
+</div>

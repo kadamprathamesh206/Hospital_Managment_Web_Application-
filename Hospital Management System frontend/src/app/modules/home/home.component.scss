@@ -1,0 +1,16 @@
+.sidebar {
+    background-color: black;
+    width: 200px;
+    height: 89vh;
+    color: rgb(55, 125, 217);
+    opacity: 100%;
+}
+
+.items {
+    padding: 8px;
+}
+
+.items:hover {
+    background-color: white;
+    cursor: pointer;
+}

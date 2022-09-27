@@ -1,0 +1,62 @@
+<h1 mat-dialog-title>
+    {{ data ? 'Edit' : 'Add' }} Patient
+</h1>
+
+<div mat-dialog-content>
+    <form [formGroup]="patientForm">
+        <div class="row justify-content-center text-center">
+            <!-- <div class="col-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>ID</mat-label>
+                    <input matInput readonly formControlName="id">
+                </mat-form-field>
+            </div> -->
+
+            <div class="col-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="name">
+                </mat-form-field>
+            </div>
+
+            <div class="col-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email">
+                </mat-form-field>
+            </div>
+
+            <div class="col-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Phone No</mat-label>
+                    <input matInput type="number" formControlName="phone_no">
+                </mat-form-field>
+            </div>
+                
+            <div class="col-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput formControlName="password">
+                </mat-form-field>
+            </div>
+            
+            <div class="col-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Confirm Password</mat-label>
+                    <input matInput formControlName="confirm_password">
+                    <mat-error *ngIf="patientForm.get('password')?.value != patientForm.get('confirm_password')?.value">
+                        Passwords must match
+                    </mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div align="center" mat-dialog-actions>
+    <button mat-button [mat-dialog-close]="">Cancel</button>
+    <button mat-raised-button color="primary" [disabled]="patientForm.invalid"
+        [mat-dialog-close]="patientForm.getRawValue()" cdkFocusInitial>
+        {{ data ? 'Update' : 'Save' }}
+    </button>
+</div>

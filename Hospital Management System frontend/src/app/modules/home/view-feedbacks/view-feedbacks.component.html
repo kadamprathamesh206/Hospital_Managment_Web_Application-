@@ -1,0 +1,40 @@
+<div class="row justify-content-between mt-2">
+    <div class="col-auto">
+        <h3>Feedbacks</h3>
+    </div>
+
+    <hr>
+
+    <div class="col-12">
+        <table class="table table-responsive table-hover text-center table-bordered table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>Feedback ID</th>
+                    <th>Feedback Name</th>
+                    <th>Description</th>
+                    <th>Email</th>
+                    <th>Phone No</th>
+                    <!-- <th>Options</th> -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of feedbacksList">
+                    <td>{{ data.id }}</td>
+                    <td>{{ data.name }}</td>
+                    <td>{{ data.desc }}</td>
+                    <td>{{ data.email }}</td>
+                    <td>{{ data.phone_no }}</td>
+                    <!-- <td>
+                        <button mat-mini-fab color="warn" matTooltip="Delete Feedback">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                        &nbsp;&nbsp;
+                        <button mat-mini-fab color="primary" matTooltip="Edit Feedback">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                    </td> -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
